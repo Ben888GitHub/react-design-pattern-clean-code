@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
 
+import {
+	FunctionOutsideJsx,
+	ObjectState,
+	JsxShorthand,
+	DestructureMultipleProps,
+	FragmentOverDiv,
+	MovieContainer,
+	TernaryOperator,
+	OneConditionalRendering
+} from './examples/index';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<h1>React Design Pattern and Clean Code</h1>
+			<FunctionOutsideJsx />
+			<br />
+			<ObjectState />
+			<br />
+			<JsxShorthand />
+			<br />
+			<DestructureMultipleProps />
+			<br />
+			<FragmentOverDiv />
+			<br />
+			<MovieContainer />
+			<br />
+			<TernaryOperator />
+			<br />
+			<OneConditionalRendering />
+		</div>
+	);
 }
 
 export default App;
