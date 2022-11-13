@@ -9,7 +9,8 @@ import {
 	FragmentOverDiv,
 	MovieContainer,
 	TernaryOperator,
-	OneConditionalRendering
+	OneConditionalRendering,
+	HandleMultipleInputs
 } from './examples/index';
 function App() {
 	return (
@@ -30,6 +31,9 @@ function App() {
 			<TernaryOperator />
 			<br />
 			<OneConditionalRendering />
+			<br />
+			<HandleMultipleInputs />
+			<br />
 		</div>
 	);
 }

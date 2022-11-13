@@ -6,3 +6,4 @@ export { default as DestructureMultipleProps } from './DestructureMultipleProps'
 export { default as FragmentOverDiv } from './FragmentOverDiv';
 export { default as MovieContainer } from './container-component-pattern/MovieContainer';
 export { default as OneConditionalRendering } from './OneConditionalRendering';
+export { default as HandleMultipleInputs } from './HandleMultipleInputs';
