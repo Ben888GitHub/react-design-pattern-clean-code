@@ -8,7 +8,11 @@ function HandleMultipleInputs() {
 	});
 
 	const handleChange = (e) => {
-		setUser({ ...user, [e.target.name]: e.target.value });
+		// setUser({ ...user, [e.target.name]: e.target.value });
+		setUser((currentUser) => ({
+			...currentUser,
+			[e.target.name]: e.target.value
+		}));
 	};
 
 	return (

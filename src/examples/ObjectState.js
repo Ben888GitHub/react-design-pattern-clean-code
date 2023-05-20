@@ -12,11 +12,17 @@ function ObjectState() {
 	});
 
 	const handleUpdateValue = () => {
-		setValue({
-			...value,
+		// setValue({
+		// 	...value,
+		// 	randomNum: Math.random(),
+		// 	count: value.count + 1
+		// });
+
+		setValue((prevValue) => ({
+			...prevValue,
 			randomNum: Math.random(),
-			count: value.count + 1
-		});
+			count: prevValue.count + 1
+		}));
 	};
 
 	const handleClick = () => {
