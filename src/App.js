@@ -11,6 +11,8 @@ import {
 	OneConditionalRendering,
 	HandleMultipleInputs
 } from './examples/index';
+import DynamicComponent from './examples/reset-dynamic-components/DynamicComponent';
+
 function App() {
 	return (
 		<div className="App">
@@ -32,6 +34,8 @@ function App() {
 			<OneConditionalRendering />
 			<br />
 			<HandleMultipleInputs />
+			<br />
+			<DynamicComponent />
 			<br />
 		</div>
 	);
