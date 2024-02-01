@@ -10,10 +10,19 @@ const Counter2 = ({ name }) => {
 
 	// function to dynamically update key and value of LocalStorage state
 	const handleUpdateChat = (key, value) => {
-		setChatData((prevChat) => ({
-			...prevChat,
-			[key]: value
-		}));
+		setChatData((prevChat) => {
+			if (key === 'message') {
+				return {
+					...prevChat,
+					message: value
+				};
+			} else {
+				return {
+					...prevChat,
+					count: value === 'increment' ? prevChat.count + 1 : prevChat.count - 1
+				};
+			}
+		});
 	};
 
 	return (
@@ -26,7 +35,7 @@ const Counter2 = ({ name }) => {
 					// 	...chatData,
 					// 	count: chatData.count - 1
 					// }))
-					handleUpdateChat('count', chatData.count - 1)
+					handleUpdateChat('count', 'decrement')
 				}
 			>
 				-
@@ -38,7 +47,7 @@ const Counter2 = ({ name }) => {
 					// 	...chatData,
 					// 	count: chatData.count + 1
 					// }))
-					handleUpdateChat('count', chatData.count + 1)
+					handleUpdateChat('count', 'increment')
 				}
 			>
 				+
