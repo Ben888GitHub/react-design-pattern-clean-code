@@ -8,16 +8,25 @@ const Counter2 = ({ name }) => {
 		}
 	});
 
+	// function to dynamically update key and value of LocalStorage state
+	const handleUpdateChat = (key, value) => {
+		setChatData((prevChat) => ({
+			...prevChat,
+			[key]: value
+		}));
+	};
+
 	return (
 		<div>
 			<div>{name}</div>
 
 			<button
 				onClick={() =>
-					setChatData((chatData) => ({
-						...chatData,
-						count: chatData.count - 1
-					}))
+					// setChatData((chatData) => ({
+					// 	...chatData,
+					// 	count: chatData.count - 1
+					// }))
+					handleUpdateChat('count', chatData.count - 1)
 				}
 			>
 				-
@@ -25,10 +34,11 @@ const Counter2 = ({ name }) => {
 			{chatData.count}
 			<button
 				onClick={() =>
-					setChatData((chatData) => ({
-						...chatData,
-						count: chatData.count + 1
-					}))
+					// setChatData((chatData) => ({
+					// 	...chatData,
+					// 	count: chatData.count + 1
+					// }))
+					handleUpdateChat('count', chatData.count + 1)
 				}
 			>
 				+
@@ -44,10 +54,11 @@ const Counter2 = ({ name }) => {
 				placeholder="Type chat..."
 				value={chatData.message}
 				onChange={(e) =>
-					setChatData((chatData) => ({
-						...chatData,
-						message: e.target.value
-					}))
+					// setChatData((chatData) => ({
+					// 	...chatData,
+					// 	message: e.target.value
+					// }))
+					handleUpdateChat('message', e.target.value)
 				}
 			/>
 		</div>
