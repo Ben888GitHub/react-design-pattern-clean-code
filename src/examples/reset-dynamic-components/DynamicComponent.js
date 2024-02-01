@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import Counter from './Counter';
+import Counter2 from './Counter2';
 
 const DynamicComponent = () => {
 	const [isKyle, setIsKyle] = useState(true);
+
+	const [isMax, setIsMax] = useState(true);
 
 	console.log('rerender');
 
@@ -32,6 +35,12 @@ const DynamicComponent = () => {
 
 			<br />
 			<button onClick={() => setIsKyle((k) => !k)}>Swap</button>
+
+			<br />
+			<br />
+			{isMax ? <Counter2 name="Max" /> : <Counter2 name="May" />}
+			<br />
+			<button onClick={() => setIsMax((m) => !m)}>Swap</button>
 		</div>
 	);
 };

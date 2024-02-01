@@ -16,7 +16,7 @@ function FragmentOverDiv() {
 		<>
 			<h2>
 				Use React.fragment instead of Html element like div, span, etc when you
-				won't use the key property.
+				won't use the key property OR don't wanna style the items.
 			</h2>
 			{people.map((person, idx) => (
 				<Fragment key={idx}>
